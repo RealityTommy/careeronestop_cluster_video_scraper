@@ -1,0 +1,9 @@
+version: '3'
+services:
+  careeronestop_cluster_scraper:
+    build: .
+    volumes:
+      - ./input:/app/input # Mounts input directory
+      - ./output:/app/output # Mounts output directory
+    environment:
+      - PYTHONUNBUFFERED=1 # Ensures real-time output in logs
